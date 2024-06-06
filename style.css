@@ -103,14 +103,11 @@ main {
   background-color: var(--color-verylightgray);
   overflow: hidden;
 }
-@media (min-width: 600px) {
-  .card-deck {
-    display: flex;
-    max-width: 900px;
-  }
-}
+
 .card-body {
   padding: 3em;
+  display: grid;
+  grid-template-rows: 10% 20% 50% 20%;
 }
 
 .card-img {
@@ -172,4 +169,21 @@ button:hover {
 
 .btn-3 {
   color: var(--color-verydarkcyan);
+}
+
+@media (min-width: 750px) {
+  .card-deck {
+    display: flex;
+    max-width: 900px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  main {
+    padding: 0;
+    margin: 0;
+  }
+  .card-deck {
+    border-radius: 0 !important;
+  }
 }
